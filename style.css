@@ -44,9 +44,9 @@ body {
 }
 
 .left-numbers {
-    left: -30px; /* Positioning for numbers on the left */
+    left: 15px; /* Positioning for numbers on the left */
 }
 
 .bottom-letters {
-    bottom: -30px; /* Positioning for letters on the bottom */
+    bottom: 13px; /* Positioning for letters on the bottom */
 }
