@@ -50,23 +50,23 @@ body {
 .bottom-letters {
     bottom: 10px; /* Positioning for letters on the bottom */
 }
+
 .inside-cont {
-    display: flex;
-    flex-wrap: wrap; /* Allows squares to wrap into rows */
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
     width: 530px; /* Fixed width */
     height: 530px; /* Fixed height */
 }
+
 .chess-square {
     box-sizing: border-box;
     border: 1px solid black; /* Optional border */
 }
-.blocks{
-    position: absolute;
-}
-.bishop-image{
+
+.bishop-image {
     width: 60px;
     height: 60px;
     margin: 2px;
     background-color: transparent;
-
 }
