@@ -1,5 +1,6 @@
 import './moves.js'
 import './details/piece.js'
+import { handleSquareClick } from './moves.js';
 
 function createNumbers() {
     let container = document.querySelector(".num-cont");
@@ -23,18 +24,22 @@ function createNumbers() {
     }
 }
 
-// Call function to generate the numbers and letters
-createNumbers();
-
-function createBlock() {
+export function createBlock() {
     let blockCont = document.querySelector(".js-inside-cont")
 
     for (let i = 0; i < 8; i++) {
         for (let j = 0; j < 8; j++) {
             let square = document.createElement("div")
-            square.id = "square" + i;
+            let columnLetter = String.fromCharCode(65 + j)
+            let rowNumber = 8 - i;
+            let position = columnLetter + rowNumber
+            square.id = position;
             console.log(square.id)
 
+            square.addEventListener('click', () => {
+                handleSquareClick(position)
+            })
+     
             if ((i + j) % 2 === 0 ) {
                 square.style.backgroundColor = "white"
             } else {
@@ -44,8 +49,7 @@ function createBlock() {
             square.style.height = "12.5%"
             square.style.float = "left"
             
-            blockCont.appendChild(square)
-
+            blockCont.appendChild(square)  
         }
     }
 }
