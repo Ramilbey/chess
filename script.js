@@ -1,6 +1,7 @@
 import './moves.js'
 import './details/piece.js'
 import { handleSquareClick } from './moves.js';
+import './details/positon.js'
 
 function createNumbers() {
     let container = document.querySelector(".num-cont");
@@ -23,6 +24,7 @@ function createNumbers() {
         container.appendChild(letter);
     }
 }
+createNumbers()
 
 export function createBlock() {
     let blockCont = document.querySelector(".js-inside-cont")
