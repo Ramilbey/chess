@@ -3,6 +3,7 @@ import './details/piece.js'
 import { handleSquareClick } from './moves.js';
 import './details/positon.js'
 
+
 function createNumbers() {
     let container = document.querySelector(".num-cont");
 
