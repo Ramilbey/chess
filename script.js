@@ -1,3 +1,6 @@
+import './moves.js'
+import './details/piece.js'
+
 function createNumbers() {
     let container = document.querySelector(".num-cont");
 
@@ -47,5 +50,6 @@ function createBlock() {
     }
 }
 createBlock()
+
 
 
