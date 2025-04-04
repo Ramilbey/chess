@@ -1,4 +1,3 @@
-// Create numbers and letters on the chessboard
 function createNumbers() {
     let container = document.querySelector(".num-cont");
 
@@ -24,58 +23,29 @@ function createNumbers() {
 // Call function to generate the numbers and letters
 createNumbers();
 
-// Create the chessboard blocks (squares)
 function createBlock() {
-    let blockCont = document.querySelector(".js-inside-cont");
+    let blockCont = document.querySelector(".js-inside-cont")
 
     for (let i = 0; i < 8; i++) {
         for (let j = 0; j < 8; j++) {
-            let square = document.createElement("div");
-            square.classList.add('chess-square');
+            let square = document.createElement("div")
+            square.id = "square" + i;
+            console.log(square.id)
 
-            // Alternate colors for the squares
-            if ((i + j) % 2 === 0) {
-                square.style.backgroundColor = "white";
+            if ((i + j) % 2 === 0 ) {
+                square.style.backgroundColor = "white"
             } else {
-                square.style.backgroundColor = "black";
+                square.style.backgroundColor = "black"
             }
+            square.style.width = "12.5%"
+            square.style.height = "12.5%"
+            square.style.float = "left"
+            
+            blockCont.appendChild(square)
 
-            blockCont.appendChild(square);
         }
     }
 }
-createBlock();
+createBlock()
 
-// Define pieces
-import { piece } from './details/piece';
 
-let pieceHTML = "";
-piece.forEach((pieces) => {
-    pieceHTML += `
-    <p class="js-text">${pieces.name}</p>
-    <img src="${pieces.image}" alt="${pieces.name}" class="bishop-image js-bishop">
-    `;
-});
-document.querySelector(".blocks").innerHTML = pieceHTML;
-
-function placePieces() {
-    const pieceContainer = document.querySelector(".js-inside-cont");
-    piece.forEach((pieces) => {
-        const pieceElement = document.createElement("div");
-        pieceElement.classList.add('chess-piece');
-        pieceElement.innerHTML = `
-            <p class="js-text">${pieces.name}</p>
-            <img src="${pieces.image}" alt="${pieces.name}" class="bishop-image js-bishop">
-        `;
-        // Find the square by piece position (example: "a1")
-        const position = pieces.id; // "a1", "b2", etc.
-        const row = 8 - parseInt(position[1]); // Rows are 1 to 8, so reverse for grid
-        const col = position.charCodeAt(0) - 97; // Converts 'a' to 'h' to 0 to 7
-        pieceElement.style.gridRow = row + 1;
-        pieceElement.style.gridColumn = col + 1;
-        
-        pieceContainer.appendChild(pieceElement);
-    });
-}
-
-placePieces();
