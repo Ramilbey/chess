@@ -12,7 +12,7 @@ document.querySelectorAll('.image-piece').forEach((img) => {
         const name = img.previousElementSibling?.textContent;
 
         if (img.classList.contains('selected')) {
-            nameDisplay.textContent = `Selected: ${name}`;
+            nameDisplay.textContent =  name;
         } else {
             nameDisplay.textContent = '';
         }
