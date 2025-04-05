@@ -84,9 +84,19 @@ body {
 .pawn-block {
     text-align: center;
 }
-.nameOfPiece::hover{
+/* .nameOfPiece::hover{
    color: blue;
+} */
+
+.selected-name {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: green;
 }
+
 
 
 

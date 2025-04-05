@@ -6,6 +6,6 @@ export function handleSquareClick(position) {
     console.log("Clicked on:", position);
 
     const square = document.getElementById(position);
-    square.classList.toggle("selected")    
+    // square.classList.toggle("selected")    
 
 }

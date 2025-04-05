@@ -1,6 +1,6 @@
 import { piece } from "../details/piece.js"
 
-let pieceHtml = '';
+export let pieceHtml = '';
 piece?.forEach((item) => {
     if (item.pawn_name) {
         pieceHtml += `

@@ -2,6 +2,7 @@ import './moves.js'
 import './details/piece.js'
 import { handleSquareClick } from './moves.js';
 import './details/positon.js'
+import './details/effect.js'
 
 
 function createNumbers() {
