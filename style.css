@@ -88,14 +88,26 @@ body {
    color: blue;
 } */
 
-.selected-name {
+/* .selected-name {
     position: absolute;
     top: 10px;
     left: 10px;
     font-size: 20px;
     font-weight: bold;
     color: green;
+} */
+.js-text {
+    display: none;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: green;
+    font-size: 14px;
 }
+
+.visible-name {
+    display: block;
+}
+
 
 
 
